@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 						email: 'farhan687@gmail.com'
 					},
 					repo: '',
-					repo: 'https://' + new Buffer(process.env.DOCBASE_TOKEN, 'base64').toString() + '@github.com/farhan687/emberjs.git',
+					repo: 'https://' + new Buffer(process.env.DOCBASE_TOKEN, 'base64').toString() + '@github.com/farhan687/sampleDocs.git',
 					message: 'publish gh-pages (auto)',
 					silent: false,
 				},
