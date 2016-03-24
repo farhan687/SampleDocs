@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 				options: {
 					generatePath: "docs_html/",
 					generateSearchIndex : true,
-					generateHtml : false,
+					generateHtml : true,
 					baseUrl: "./",
 					urlToAccess: "http://localhost:9001/",
 					assets: ['bower_components', 'styles', 'images', 'docbase-config.js'],
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					onlysearchIndex: true,
 					generatePath: "docs_html/",
 					generateSearchIndex : true,
-					generateHtml : false,
+					generateHtml : true,
 					baseUrl: "./",
 					urlToAccess: "http://localhost:9001/",
 					assets: ['bower_components', 'styles', 'images',],
@@ -46,9 +46,9 @@ module.exports = function(grunt) {
 					repo: '',
 					repo: 'https://' + new Buffer(process.env.DOCBASE_TOKEN, 'base64').toString() + '@github.com/farhan687/sampleDocs.git',
 					message: 'publish gh-pages (auto)',
-					silent: false
+					silent: false,
 				},
-				src: ['**/*']
+				src: ['**']
 			}
 		},
 		sass: { 
