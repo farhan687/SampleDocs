@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 				options: {
 					generatePath: "docs_html/",
 					generateSearchIndex : true,
-					generateHtml : true,
+					generateHtml : false,
 					baseUrl: "./",
 					urlToAccess: "http://localhost:9001/",
 					assets: ['bower_components', 'styles', 'images', 'docbase-config.js'],
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					onlysearchIndex: true,
 					generatePath: "docs_html/",
 					generateSearchIndex : true,
-					generateHtml : true,
+					generateHtml : false,
 					baseUrl: "./",
 					urlToAccess: "http://localhost:9001/",
 					assets: ['bower_components', 'styles', 'images',],
