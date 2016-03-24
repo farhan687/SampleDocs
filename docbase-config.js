@@ -12,10 +12,10 @@ var docbaseConfig = {
     "path": ""
   },
   "github": {
-    "user": "farhan687",
-    "repo": "sampleDocs",
-    "path": "docInside",
-    "branch": "master",
+    "user": "",
+    "repo": "",
+    "path": "",
+    "branch": "",
     "access_token": "MzNlYmQ5NzA3NWQyODAyZGZiZDE2ZjBiZjkzMGViZWI0NmU5MDVjNQ=="
   },
   "indexHtml": "./html/main.html",
