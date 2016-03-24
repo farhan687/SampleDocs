@@ -46,9 +46,9 @@ module.exports = function(grunt) {
 					repo: '',
 					repo: 'https://' + new Buffer(process.env.DOCBASE_TOKEN, 'base64').toString() + '@github.com/farhan687/sampleDocs.git',
 					message: 'publish gh-pages (auto)',
-					silent: false,
+					silent: false
 				},
-				src: ['**']
+				src: ['**/*']
 			}
 		},
 		sass: { 
