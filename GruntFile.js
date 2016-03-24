@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 		'gh-pages': {
 			def: {
 				options: {
-					base: 'docs_html',
+					base: '/',
 					user: {
 						name: 'Travis',
 						email: 'farhan687@gmail.com'
