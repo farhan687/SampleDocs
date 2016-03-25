@@ -41,11 +41,6 @@ module.exports = function(grunt) {
 			def: {
 				options: {
 					base: 'docs_html',
-					user: {
-						name: 'Travis',
-						email: 'farhan687@gmail.com'
-					},
-					repo: 'https://' + new Buffer(process.env.DOCBASE_TOKEN, 'base64').toString() + '@github.com/farhan687/sampleDocs.git',
 					message: 'publish gh-pages (auto)',
 					silent: false,
 				},
