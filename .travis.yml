@@ -11,5 +11,4 @@ before_script:
 - npm install -g bower
 - grunt gh-pages-clean
 - bower update
-
 sudo: false
