@@ -42,8 +42,8 @@ module.exports = function(grunt) {
 				options: {
 					base: 'docs_html',
 					user: {
-						name: 'Travis',
-						email: 'farhan687@gmail.com'
+						name: 'Docbase bot',
+						email: 'awesome@docba.se'
 					},
 					message: 'publish gh-pages (auto)',
 					silent: false,
