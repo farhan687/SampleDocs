@@ -41,6 +41,10 @@ module.exports = function(grunt) {
 			def: {
 				options: {
 					base: 'docs_html',
+					user: {
+						name: 'Travis',
+						email: 'farhan687@gmail.com'
+					}
 					message: 'publish gh-pages (auto)',
 					silent: false,
 				},
