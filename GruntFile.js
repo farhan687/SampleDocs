@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 					user: {
 						name: 'Travis',
 						email: 'farhan687@gmail.com'
-					}
+					},
 					message: 'publish gh-pages (auto)',
 					silent: false,
 				},
