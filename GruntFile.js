@@ -7,22 +7,24 @@ module.exports = function(grunt) {
 					generateSearchIndex : true,
 					generateHtml : true,
 					baseUrl: "./",
+					operation: 'parallel',
 					urlToAccess: "http://localhost:9001/",
 					assets: ['bower_components', 'styles', 'images', 'docbase-config.js'],
 					checkLoadedSelector : '#navbar-collapse',
-					endDocument: "<script>$(function(){  $('.search-form').searchAppbase('/search-index.json', true); })</script></html>"
+					endDocument: "<script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); })</script></html>"
 				}
 			},
 			spa: {
 				options: {
 					onlysearchIndex: true,
-					generatePath: "docs_html/",
+					generatePath: "spa/",
 					generateSearchIndex : true,
-					generateHtml : true,
+					generateHtml : false,
 					baseUrl: "./",
+					operation: 'parallel',
 					urlToAccess: "http://localhost:9001/",
-					assets: ['bower_components', 'styles', 'images',],
-					checkLoadedSelector : '#navbar-collapse',
+					assets: ['docs', 'html', 'index.html', 'bower_components', 'styles', 'images', 'docbase-config.js', 'search-index.json' ],
+					checkLoadedSelector : '#navbar-collapse'
 				}
 			}
 		},
@@ -38,12 +40,11 @@ module.exports = function(grunt) {
 		'gh-pages': {
 			def: {
 				options: {
-					base: '/',
+					base: 'docs_html',
 					user: {
 						name: 'Travis',
 						email: 'farhan687@gmail.com'
 					},
-					repo: '',
 					repo: 'https://' + new Buffer(process.env.DOCBASE_TOKEN, 'base64').toString() + '@github.com/farhan687/sampleDocs.git',
 					message: 'publish gh-pages (auto)',
 					silent: false,
