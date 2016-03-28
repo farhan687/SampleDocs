@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width">
-  <base href="">
+  <base href="../../">
   <title>Documentation</title>
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -18,7 +18,7 @@
   
 <script type="text/javascript" async="" src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
 <body role="flatdoc">
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: 'html/navbar.html' --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="'html/navbar.html'"><div class="container-fluid ng-scope">
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -121,18 +121,40 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div class="container-fluid push ng-scope">
-  <div class="row">
-    <div class="col-xs-12 landing">
-      <h1>Doc<b>base</b></h1>
-    </div>
-
-    <div class="col-xs-12 list">
-      <!-- ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./scalr/FAQs/index.html ng-bind="folder.label">FAQs</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./scalr/concepts/index.html ng-bind="folder.label">concepts</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./scalr/golang/index.html ng-bind="folder.label">golang</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./scalr/javascript/index.html ng-bind="folder.label">javascript</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./scalr/rest/index.html ng-bind="folder.label">rest</a><!-- end ngRepeat: folder in map[currentVersion] -->
-		</div>
+<div role="flatdoc" class="content-root ng-scope ng-hide" data-ng-show="!index">
+  <div class="menubar">
+    <div class="menu section" role="flatdoc-menu"></div>
   </div>
+  <div role="flatdoc-content" class="content"></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="" target="_blank">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
+					<a href="" class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right disabled">
+					<a href="" class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
 </div>
-</div>
+<!-- ngIf: index --><div class="index-container ng-scope" data-ng-if="index">
+	<div class="container">
+		<div class="row">
+			<h1 class="col-xs-12 ng-binding">
+				rest
+			</h1>
+		</div>
+		<ul class="row indexList">
+			<!-- ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./scalr/rest/intro.html class="col-xs-12 ng-binding">intro</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList -->
+		</ul>
+	</div>
+</div><!-- end ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

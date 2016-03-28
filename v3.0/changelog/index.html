@@ -34,21 +34,50 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
     <ul class="nav navbar-nav">
       <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-        <a ng-href=./alpha/Helloworld/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./alpha/Helloworld/index.html>Helloworld</a>
+        <a ng-href=./v3.0/changelog/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v3.0/changelog/index.html>changelog</a>
         <ul class="dropdown-menu">
           <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./alpha/Helloworld/welcome.html ng-bind="file.label" class="ng-binding" href=./alpha/Helloworld/welcome.html>welcome</a>
+            <a ng-href=./v3.0/changelog/changelog.html ng-bind="file.label" class="ng-binding" href=./v3.0/changelog/changelog.html>changelog</a>
           </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
-            <a ng-href=./alpha/Helloworld/index.html ng-bind="file.label" class="ng-binding" href=./alpha/Helloworld/index.html>index</a>
+            <a ng-href=./v3.0/changelog/index.html ng-bind="file.label" class="ng-binding" href=./v3.0/changelog/index.html>index</a>
           </li><!-- end ngRepeat: file in folder.files -->
         </ul>
       </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-        <a ng-href=./alpha/sampleWorld/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./alpha/sampleWorld/index.html>sampleWorld</a>
+        <a ng-href=./v3.0/concepts/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v3.0/concepts/index.html>concepts</a>
         <ul class="dropdown-menu">
           <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./alpha/sampleWorld/justsample.html ng-bind="file.label" class="ng-binding" href=./alpha/sampleWorld/justsample.html>justsample</a>
+            <a ng-href=./v3.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=./v3.0/concepts/datamodel.html>datamodel</a>
           </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
-            <a ng-href=./alpha/sampleWorld/index.html ng-bind="file.label" class="ng-binding" href=./alpha/sampleWorld/index.html>index</a>
+            <a ng-href=./v3.0/concepts/index.html ng-bind="file.label" class="ng-binding" href=./v3.0/concepts/index.html>index</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href=./v3.0/javascript/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v3.0/javascript/index.html>javascript</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+            <a ng-href=./v3.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=./v3.0/javascript/api-reference.html>api-reference</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+            <a ng-href=./v3.0/javascript/index.html ng-bind="file.label" class="ng-binding" href=./v3.0/javascript/index.html>index</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href=./v3.0/rest/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v3.0/rest/index.html>rest</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+            <a ng-href=./v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=./v3.0/rest/api-reference.html>api-reference</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+            <a ng-href=./v3.0/rest/index.html ng-bind="file.label" class="ng-binding" href=./v3.0/rest/index.html>index</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href=./v3.0/search/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v3.0/search/index.html>search</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+            <a ng-href=./v3.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=./v3.0/search/quick-start.html>quick-start</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+            <a ng-href=./v3.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=./v3.0/search/use-cases.html>use-cases</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+            <a ng-href=./v3.0/search/index.html ng-bind="file.label" class="ng-binding" href=./v3.0/search/index.html>index</a>
           </li><!-- end ngRepeat: file in folder.files -->
         </ul>
       </li><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -60,13 +89,15 @@
       </li>
       <li class="dropdown">
         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-           <span ng-bind="currentVersion" class="ng-binding">alpha</span> <span class="caret"></span>
+           <span ng-bind="currentVersion" class="ng-binding">v3.0</span> <span class="caret"></span>
         </a>
         <ul class="dropdown-menu version-switcher" role="menu">
           <!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-            <a ng-href=./alpha/Helloworld/welcome.html ng-bind="version" class="ng-binding" href=./alpha/Helloworld/welcome.html>alpha</a>
+            <a ng-href=./scalr.html ng-bind="version" class="ng-binding" href=./scalr.html>scalr</a>
           </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-            <a ng-href=./beta/sample/sample1.html ng-bind="version" class="ng-binding" href=./beta/sample/sample1.html>beta</a>
+            <a ng-href=./v2.0.html ng-bind="version" class="ng-binding" href=./v2.0.html>v2.0</a>
+          </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=./v3.0.html ng-bind="version" class="ng-binding" href=./v3.0.html>v3.0</a>
           </li><!-- end ngRepeat: version in versions -->
         </ul>
       </li>
@@ -78,26 +109,44 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index -->
+<div role="flatdoc" class="content-root ng-scope ng-hide" data-ng-show="!index">
+  <div class="menubar">
+    <div class="menu section" role="flatdoc-menu"></div>
+  </div>
+  <div role="flatdoc-content" class="content"></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="" target="_blank">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
+					<a href="" class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right disabled">
+					<a href="" class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- ngIf: index --><div class="index-container ng-scope" data-ng-if="index">
 	<div class="container">
 		<div class="row">
 			<h1 class="col-xs-12 ng-binding">
-				sampleWorld
+				changelog
 			</h1>
 		</div>
-		<ul class="row">
-			<!-- ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
-				<a href=./alpha/sampleWorld/justsample.html class="col-xs-12 ng-binding">justsample</a>
+		<ul class="row indexList">
+			<!-- ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./v3.0/changelog/changelog.html class="col-xs-12 ng-binding">changelog</a>
 			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList -->
 		</ul>
 	</div>
-</div><!-- end ngIf: index -->
-</div>
+</div><!-- end ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>
 
 
 
-</body><script>$(function(){  $('.search-form').searchAppbase('/search-index.json', true); })</script></html>
+</body><script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); })</script></html>
