@@ -1,20 +1,20 @@
 .landing, .button, .navbar-fixed-top {
-  background-color: yellowgreen; }
+  background-color: brown; }
 
 .index-container li a, .menu a, .menu a:visited, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, a, ul.nav li.dropdown:hover > a {
-  color: yellowgreen; }
+  color: brown; }
 
 a:active, a:hover, .menu a:hover {
-  color: #7ba428; }
+  color: #7c2020; }
 
 .tt-menu:before {
-  border-bottom-color: yellowgreen; }
+  border-bottom-color: brown; }
 
 .paginationLink {
-  border-color: yellowgreen; }
+  border-color: brown; }
 
 .paginationLink:hover {
-  background: yellowgreen;
-  border-color: #7ba428; }
+  background: brown;
+  border-color: #7c2020; }
 
 /*# sourceMappingURL=theme.css.map */

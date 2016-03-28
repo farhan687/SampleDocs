@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width">
-  <base href="">
+  <base href="../../">
   <title>Documentation</title>
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -17,8 +17,8 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc">
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: 'html/navbar.html' --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="'html/navbar.html'"><div class="container-fluid ng-scope">
+<body role="flatdoc" class="no-literate">
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -78,18 +78,27 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div class="container-fluid push ng-scope">
-  <div class="row">
-    <div class="col-xs-12 landing">
-      <h1>Doc<b>base</b></h1>
-    </div>
-
-    <div class="col-xs-12 list">
-      <!-- ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./alpha/Helloworld/index.html ng-bind="folder.label">Helloworld</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./alpha/sampleWorld/index.html ng-bind="folder.label">sampleWorld</a><!-- end ngRepeat: folder in map[currentVersion] -->
-		</div>
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
+  <div class="menubar fixed">
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="we-are-building-the-awesome-item" class="level-1"><a id="we-are-building-the-awesome-link" href="./alpha/sampleWorld/justsample.html#we-are-building-the-awesome" class="level-1" pref="#we-are-building-the-awesome">We are building the awesome</a><ul class="level-2" id="we-are-building-the-awesome-list"><li id="we-are-building-the-awesome-sub-title-here-item" class="level-2"><a id="we-are-building-the-awesome-sub-title-here-link" href="./alpha/sampleWorld/justsample.html#we-are-building-the-awesome-sub-title-here" class="level-2" pref="#we-are-building-the-awesome-sub-title-here">Sub title here</a></li></ul></li></ul></li></ul></div>
   </div>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/SampleDocs/commit/295f9857f40e1a983af7cb746349d5d85680cbd5">Mar 9, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h1 id="we-are-building-the-awesome">We are building the awesome</h1><h2 id="we-are-building-the-awesome-sub-title-here">Sub title here</h2><p>Some doc here here</p></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/sampleDocs/tree/master/docInside/alpha/sampleWorld/justsample.md" target="_blank" href="https://github.com/farhan687/sampleDocs/tree/master/docInside/alpha/sampleWorld/justsample.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./alpha/Helloworld/welcome.html class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right disabled">
+					<a href="" class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
 </div>
-</div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>
