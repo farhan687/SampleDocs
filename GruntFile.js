@@ -45,6 +45,7 @@ module.exports = function(grunt) {
 						name: 'Docbase bot',
 						email: 'awesome@docba.se'
 					},
+					repo: 'https://' + new Buffer(process.env.DOCBASE_TOKEN, 'base64').toString() + '@github.com/farhan687/sampleDocs.git',
 					message: 'publish gh-pages (auto)',
 					silent: false,
 				},
