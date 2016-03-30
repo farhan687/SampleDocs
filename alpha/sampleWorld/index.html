@@ -83,8 +83,6 @@
     <div class="menu section" role="flatdoc-menu"></div>
   </div>
   <div role="flatdoc-content" class="content"></div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="" target="_blank">  <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
   	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
@@ -102,14 +100,19 @@
 	<div class="container">
 		<div class="row">
 			<h1 class="col-xs-12 ng-binding">
-				sampleWorld
+				sampleWorld (1 files)
 			</h1>
+		</div>	
+		<div class="row indexLinkContainer">
+			<ul class="col-xs-12 col-sm-6">
+				<!-- ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
+					<a href=./alpha/sampleWorld/justsample.html class="col-xs-12 ng-binding"> justsample</a>
+				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList -->
+			</ul>
+			<ul class="col-xs-12 col-sm-6">
+				<!-- ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList -->
+			</ul>
 		</div>
-		<ul class="row indexList">
-			<!-- ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
-				<a href=./alpha/sampleWorld/justsample.html class="col-xs-12 ng-binding">justsample</a>
-			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList -->
-		</ul>
 	</div>
 </div><!-- end ngIf: index --></div>
 
