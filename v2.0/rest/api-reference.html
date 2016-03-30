@@ -30,79 +30,141 @@
       <img src="./images/docbase.png">
     </a>
   </div>
-
   <div class="collapse navbar-collapse" id="navbar-collapse">
-    <ul class="nav navbar-nav">
-      <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-        <a ng-href=./v2.0/concepts/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/concepts/index.html>concepts</a>
-        <ul class="dropdown-menu">
-          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=./v2.0/concepts/datamodel.html>datamodel</a>
-          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
-            <a ng-href=./v2.0/concepts/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/concepts/index.html>index</a>
-          </li><!-- end ngRepeat: file in folder.files -->
-        </ul>
-      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-        <a ng-href=./v2.0/javascript/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/javascript/index.html>javascript</a>
-        <ul class="dropdown-menu">
-          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/angular.html>angular</a>
-          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/api-reference.html>api-reference</a>
-          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/oauth.html>oauth</a>
-          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/quick-start.html>quick-start</a>
-          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
-            <a ng-href=./v2.0/javascript/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/index.html>index</a>
-          </li><!-- end ngRepeat: file in folder.files -->
-        </ul>
-      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-        <a ng-href=./v2.0/rest/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/rest/index.html>rest</a>
-        <ul class="dropdown-menu">
-          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=./v2.0/rest/api-reference.html>api-reference</a>
-          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
-            <a ng-href=./v2.0/rest/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/rest/index.html>index</a>
-          </li><!-- end ngRepeat: file in folder.files -->
-        </ul>
-      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-        <a ng-href=./v2.0/search/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/search/index.html>search</a>
-        <ul class="dropdown-menu">
-          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=./v2.0/search/quick-start.html>quick-start</a>
-          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-            <a ng-href=./v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=./v2.0/search/use-cases.html>use-cases</a>
-          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
-            <a ng-href=./v2.0/search/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/search/index.html>index</a>
-          </li><!-- end ngRepeat: file in folder.files -->
-        </ul>
-      </li><!-- end ngRepeat: folder in map[currentVersion] -->
-    </ul>
-
-    <ul class="nav navbar-nav navbar-right">
-       <li class="dropdown search-dropdown">
-        <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><span class="twitter-typeahead" style="position: relative; display: inline-block; "><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" style="position: absolute; top: 0px; left: 0px; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size:  ; background-position: 0% 0%; background-repeat: repeat repeat; " readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent; "><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none; "></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; "><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
-      </li>
-      <li class="dropdown">
-        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-           <span ng-bind="currentVersion" class="ng-binding">v2.0</span> <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu version-switcher" role="menu">
-          <!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-            <a ng-href=./scalr.html ng-bind="version" class="ng-binding" href=./scalr.html>scalr</a>
-          </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-            <a ng-href=./v2.0.html ng-bind="version" class="ng-binding" href=./v2.0.html>v2.0</a>
-          </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-            <a ng-href=./v3.0.html ng-bind="version" class="ng-binding" href=./v3.0.html>v3.0</a>
-          </li><!-- end ngRepeat: version in versions -->
-        </ul>
-      </li>
-      <!-- ngIf: docbaseOptions.method == 'github' --><li class="github-star ng-scope" data-ng-if="docbaseOptions.method == 'github'">
-        <iframe src="https://ghbtns.com/github-btn.html?user=farhan687&amp;repo=sampleDocs&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-      </li><!-- end ngIf: docbaseOptions.method == 'github' -->
-      <!-- ngIf: docbaseOptions.method != 'github' -->
-    </ul>
+    <div class="pull-left" id="folder-navbar">
+      <ul class="nav navbar-nav folder-li">
+        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+          <a ng-href=./v2.0/concepts/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/concepts/index.html>concepts</a>
+          <ul class="dropdown-menu">
+            <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=./v2.0/concepts/datamodel.html>datamodel</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+              <a ng-href=./v2.0/concepts/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/concepts/index.html>index</a>
+            </li><!-- end ngRepeat: file in folder.files -->
+          </ul>
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+          <a ng-href=./v2.0/javascript/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/javascript/index.html>javascript</a>
+          <ul class="dropdown-menu">
+            <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/angular.html>angular</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/api-reference.html>api-reference</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/oauth.html>oauth</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/quick-start.html>quick-start</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+              <a ng-href=./v2.0/javascript/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/index.html>index</a>
+            </li><!-- end ngRepeat: file in folder.files -->
+          </ul>
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+          <a ng-href=./v2.0/rest/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/rest/index.html>rest</a>
+          <ul class="dropdown-menu">
+            <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=./v2.0/rest/api-reference.html>api-reference</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+              <a ng-href=./v2.0/rest/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/rest/index.html>index</a>
+            </li><!-- end ngRepeat: file in folder.files -->
+          </ul>
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+          <a ng-href=./v2.0/search/index.html class="dropdown-toggle map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/search/index.html>search</a>
+          <ul class="dropdown-menu">
+            <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=./v2.0/search/quick-start.html>quick-start</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=./v2.0/search/use-cases.html>use-cases</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+              <a ng-href=./v2.0/search/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/search/index.html>index</a>
+            </li><!-- end ngRepeat: file in folder.files -->
+          </ul>
+        </li><!-- end ngRepeat: folder in map[currentVersion] -->
+      </ul>
+      <ul class="nav navbar-nav category-li">
+        <li class="dropdown menu-large">
+          <a class="dropdown-toggle pointer" data-toggle="dropdown">Categories <b class="caret"></b></a>       
+          <ul class="dropdown-menu megamenu row">
+            <!-- ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+              <ul>
+                <li class="dropdown-header">
+                  <a ng-href=./v2.0/concepts/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/concepts/index.html>concepts</a>
+                </li>   
+                <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=./v2.0/concepts/datamodel.html>datamodel</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                  <a ng-href=./v2.0/concepts/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/concepts/index.html>index</a>
+                </li><!-- end ngRepeat: file in folder.files -->
+              </ul>
+            </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+              <ul>
+                <li class="dropdown-header">
+                  <a ng-href=./v2.0/javascript/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/javascript/index.html>javascript</a>
+                </li>   
+                <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/angular.html>angular</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/api-reference.html>api-reference</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/oauth.html>oauth</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/quick-start.html>quick-start</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                  <a ng-href=./v2.0/javascript/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/javascript/index.html>index</a>
+                </li><!-- end ngRepeat: file in folder.files -->
+              </ul>
+            </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+              <ul>
+                <li class="dropdown-header">
+                  <a ng-href=./v2.0/rest/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/rest/index.html>rest</a>
+                </li>   
+                <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=./v2.0/rest/api-reference.html>api-reference</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                  <a ng-href=./v2.0/rest/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/rest/index.html>index</a>
+                </li><!-- end ngRepeat: file in folder.files -->
+              </ul>
+            </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+              <ul>
+                <li class="dropdown-header">
+                  <a ng-href=./v2.0/search/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href=./v2.0/search/index.html>search</a>
+                </li>   
+                <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=./v2.0/search/quick-start.html>quick-start</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=./v2.0/search/use-cases.html>use-cases</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                  <a ng-href=./v2.0/search/index.html ng-bind="file.label" class="ng-binding" href=./v2.0/search/index.html>index</a>
+                </li><!-- end ngRepeat: file in folder.files -->
+              </ul>
+            </li><!-- end ngRepeat: folder in map[currentVersion] -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="pull-right" id="other-navs">
+      <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown search-dropdown">
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+        </li>
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+             <span ng-bind="currentVersion" class="ng-binding">v2.0</span> <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu version-switcher" role="menu">
+            <!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+              <a ng-href=./scalr.html ng-bind="version" class="ng-binding" href=./scalr.html>scalr</a>
+            </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+              <a ng-href=./v2.0.html ng-bind="version" class="ng-binding" href=./v2.0.html>v2.0</a>
+            </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+              <a ng-href=./v3.0.html ng-bind="version" class="ng-binding" href=./v3.0.html>v3.0</a>
+            </li><!-- end ngRepeat: version in versions -->
+          </ul>
+        </li>
+        <!-- ngIf: docbaseOptions.method == 'github' --><li class="github-star ng-scope" data-ng-if="docbaseOptions.method == 'github'">
+          <iframe src="https://ghbtns.com/github-btn.html?user=farhan687&amp;repo=sampleDocs&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        </li><!-- end ngIf: docbaseOptions.method == 'github' -->
+        <!-- ngIf: docbaseOptions.method != 'github' -->
+      </ul>
+    </div>
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
@@ -828,61 +890,61 @@ ioClient</span><span class="pun">.</span><span class="pln">emit</span><span clas
             </span><span class="string"><span class="str">"order"</span></span><span class="pun">:</span><span class="number"><span class="lit">234245</span></span><span class="pln">
         </span><span class="pun">}</span><span class="pln">
     </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“RETR”</em>. <code>data.edges</code> are all the existing edges of the vertex. Each edge has a <code>timestamp</code> which describes when the timestamp was last changed, and <code>order</code> is the priority of the edge. <code>t_id</code> of each edge displays the internal id of the vertex it points to.</p><h5>Edge addition or replacement</h5><p>The data that arrives is:</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"optype"</span></span><span class="pun">:</span><span class="string"><span class="str">"RETR"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"user`</span><span class="number"><span class="str">54943</span></span><span class="str">c</span><span class="number"><span class="str">863</span></span><span class="str">b</span><span class="number"><span class="str">87</span></span><span class="str">a</span><span class="number"><span class="str">791550</span></span><span class="str">d</span><span class="number"><span class="str">835</span></span><span class="str">a"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"edges"</span></span><span class="pun">:{</span><span class="pln">
-        </span><span class="string"><span class="str">"pqrs"</span></span><span class="pun">:{</span><span class="pln">
-            </span><span class="string"><span class="str">"t_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"misc`</span><span class="number"><span class="str">5</span></span><span class="str">w</span><span class="number"><span class="str">5</span></span><span class="str">rgfhfrtu</span><span class="number"><span class="str">5835</span></span><span class="str">"</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419000999913</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"order"</span></span><span class="pun">:</span><span class="number"><span class="lit">23341</span></span><span class="pln">
-        </span><span class="pun">}</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“UPDATE”</em> and only the edges which are replaced or added, are present here.</p><h5>3. Edge removal</h5><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"optype"</span></span><span class="pun">:</span><span class="string"><span class="str">"REMOVE"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"edges"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"pqrs"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-            </span><span class="string"><span class="str">"t_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">""</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419001116911</span></span><span class="pln">
-        </span><span class="pun">}</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“REMOVE”</em> and <code>data.edges</code> includes edges which are deleted. Notice that <code>t_id</code> of the edge is empty and now it doesn’t point to any vertex.</p><h5>4. Do an “Off” request</h5><p>When you do a <code>ioClient.emit('edges off', requestObj)</code> to turn off the data listening, you receive a string as data. The value of this string is <code>"STOPPED"</code>. It simply tells you that the callback will never be called again, unless you request for the data again.</p><h5>5. Error</h5><p>Whenever an error occurs, the data will be a string, containing the error message.</p><h3 id="socketio-api-endpoints-parsing-the-data-namespace">Namespace</h3><p>Suppose that you are listening on the namespace <em>user</em>, so you build a <em>requestObject</em>, attached a callback and you requested for the data.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="kwd">var</span><span class="pln"> request </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"appname"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"chat_app"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"secret"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"dskfhyr</span><span class="number"><span class="str">987</span></span><span class="str">r</span><span class="number"><span class="str">09</span></span><span class="str">g</span><span class="number"><span class="str">8</span></span><span class="str">w</span><span class="number"><span class="str">00309309</span></span><span class="str">"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"namespace"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"user"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"listener_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"asasasfasaef</span><span class="number"><span class="str">324</span></span><span class="str">"</span></span><span class="pln">
-</span><span class="pun">};</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“RETR”</em>. <code>data.edges</code> are all the existing edges of the vertex. Each edge has a <code>timestamp</code> which describes when the timestamp was last changed, and <code>order</code> is the priority of the edge. <code>t_id</code> of each edge displays the internal id of the vertex it points to.</p><h5>Edge addition or replacement</h5><p>The data that arrives is:</p><pre><code class="lang-json prettyprint">{
+    <span class="string">"optype"</span>:<span class="string">"RETR"</span>,
+    <span class="string">"_id"</span>:<span class="string">"user`<span class="number">54943</span>c<span class="number">863</span>b<span class="number">87</span>a<span class="number">791550</span>d<span class="number">835</span>a"</span>,
+    <span class="string">"edges"</span>:{
+        <span class="string">"pqrs"</span>:{
+            <span class="string">"t_id"</span>:<span class="string">"misc`<span class="number">5</span>w<span class="number">5</span>rgfhfrtu<span class="number">5835</span>"</span>,
+            <span class="string">"timestamp"</span>:<span class="number">1419000999913</span>,
+            <span class="string">"order"</span>:<span class="number">23341</span>
+        }
+    }
+}</code></pre><p><code>data.optype</code> is <em>“UPDATE”</em> and only the edges which are replaced or added, are present here.</p><h5>3. Edge removal</h5><pre><code class="lang-json prettyprint">{
+    <span class="string">"optype"</span>:<span class="string">"REMOVE"</span>,
+    <span class="string">"edges"</span>: {
+        <span class="string">"pqrs"</span>: {
+            <span class="string">"t_id"</span>: <span class="string">""</span>,
+            <span class="string">"timestamp"</span>:<span class="number">1419001116911</span>
+        }
+    }
+}</code></pre><p><code>data.optype</code> is <em>“REMOVE”</em> and <code>data.edges</code> includes edges which are deleted. Notice that <code>t_id</code> of the edge is empty and now it doesn’t point to any vertex.</p><h5>4. Do an “Off” request</h5><p>When you do a <code>ioClient.emit('edges off', requestObj)</code> to turn off the data listening, you receive a string as data. The value of this string is <code>"STOPPED"</code>. It simply tells you that the callback will never be called again, unless you request for the data again.</p><h5>5. Error</h5><p>Whenever an error occurs, the data will be a string, containing the error message.</p><h3 id="socketio-api-endpoints-parsing-the-data-namespace">Namespace</h3><p>Suppose that you are listening on the namespace <em>user</em>, so you build a <em>requestObject</em>, attached a callback and you requested for the data.</p><pre><code class="lang-js prettyprint">var request = {
+    <span class="string">"appname"</span>: <span class="string">"chat_app"</span>,
+    <span class="string">"secret"</span>: <span class="string">"dskfhyr<span class="number">987</span>r<span class="number">09</span>g<span class="number">8</span>w<span class="number">00309309</span>"</span>,
+    <span class="string">"namespace"</span>: <span class="string">"user"</span>,
+    <span class="string">"listener_id"</span>: <span class="string">"asasasfasaef<span class="number">324</span>"</span>
+};
 
-ioClient</span><span class="pun">.</span><span class="pln">on</span><span class="pun">(</span><span class="pln">JSON</span><span class="pun">.</span><span class="pln">stringify</span><span class="pun">(</span><span class="pln">request</span><span class="pun">),</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="comment"><span class="com">// ...</span></span><span class="pln">
-</span><span class="pun">});</span><span class="pln">
+ioClient.on(JSON.stringify(request), function(data) {
+    <span class="comment">// ...</span>
+});
 
-ioClient</span><span class="pun">.</span><span class="pln">emit</span><span class="pun">(</span><span class="string"><span class="str">'new vertices'</span></span><span class="pun">,</span><span class="pln"> request</span><span class="pun">);</span></code></pre><p>When you listen on a namespace, you first get all the existing vertices, and then as vertices are added or removed, you get the changes.</p><h5>1. Retrieval</h5><p>Intially, all the vertices are retrieved as an array,</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">[</span><span class="pln">
-    </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"</span><span class="number"><span class="str">53</span></span><span class="str">f</span><span class="number"><span class="str">7785324</span></span><span class="str">ebdb</span><span class="number"><span class="str">4878</span></span><span class="str">cb</span><span class="number"><span class="str">677</span></span><span class="str">b"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"rootPath"</span></span><span class="pun">:</span><span class="string"><span class="str">"user/andy"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1408727123813</span></span><span class="pln">
-    </span><span class="pun">},</span><span class="pln">
-    </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"</span><span class="number"><span class="str">549454913</span></span><span class="str">b</span><span class="number"><span class="str">87</span></span><span class="str">a</span><span class="number"><span class="str">791550</span></span><span class="str">d</span><span class="number"><span class="str">836</span></span><span class="str">e"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419007121579</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"rootPath"</span></span><span class="pun">:</span><span class="string"><span class="str">"user/red"</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">]</span></code></pre><p>You do NOT get the properties of the vertices, you just get thier timestaps, internal ids, and root-paths. Using the root-path, you can again listen on their properties if you want.</p><h5>2. Addition</h5><pre><code class="prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="str">"optype"</span><span class="pun">:</span><span class="str">"UPDATE"</span><span class="pun">,</span><span class="pln">
-    </span><span class="str">"vertex"</span><span class="pun">:{</span><span class="pln">
-        </span><span class="str">"timestamp"</span><span class="pun">:</span><span class="lit">1419007153037</span><span class="pun">,</span><span class="pln">
-        </span><span class="str">"rootPath"</span><span class="pun">:</span><span class="str">"user/blue"</span><span class="pun">,</span><span class="pln">
-        </span><span class="str">"_id"</span><span class="pun">:</span><span class="str">"user`549454b13b87a791550d836f"</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“UPDATE”</em>, and <code>data.vertex</code> is the newly added vertex in the namespace.</p><h5>3. Removal (Destruction)</h5><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"optype"</span></span><span class="pun">:</span><span class="string"><span class="str">"DESTROY"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"vertex"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"user`</span><span class="number"><span class="str">549454</span></span><span class="str">b</span><span class="number"><span class="str">13</span></span><span class="str">b</span><span class="number"><span class="str">87</span></span><span class="str">a</span><span class="number"><span class="str">791550</span></span><span class="str">d</span><span class="number"><span class="str">836</span></span><span class="str">f"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419007160898</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"rootPath"</span></span><span class="pun">:</span><span class="string"><span class="str">"user/red"</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“REMOVE”</em>, and <code>data.vertex</code> is the vertex which got destroyed.</p></div>
+ioClient.emit(<span class="string">'new vertices'</span>, request);</code></pre><p>When you listen on a namespace, you first get all the existing vertices, and then as vertices are added or removed, you get the changes.</p><h5>1. Retrieval</h5><p>Intially, all the vertices are retrieved as an array,</p><pre><code class="lang-json prettyprint">[
+    {
+        <span class="string">"_id"</span>:<span class="string">"<span class="number">53</span>f<span class="number">7785324</span>ebdb<span class="number">4878</span>cb<span class="number">677</span>b"</span>,
+        <span class="string">"rootPath"</span>:<span class="string">"user/andy"</span>,
+        <span class="string">"timestamp"</span>:<span class="number">1408727123813</span>
+    },
+    {
+        <span class="string">"_id"</span>:<span class="string">"<span class="number">549454913</span>b<span class="number">87</span>a<span class="number">791550</span>d<span class="number">836</span>e"</span>,
+        <span class="string">"timestamp"</span>:<span class="number">1419007121579</span>,
+        <span class="string">"rootPath"</span>:<span class="string">"user/red"</span>
+    }
+]</code></pre><p>You do NOT get the properties of the vertices, you just get thier timestaps, internal ids, and root-paths. Using the root-path, you can again listen on their properties if you want.</p><h5>2. Addition</h5><pre><code class="prettyprint">{
+    "optype":"UPDATE",
+    "vertex":{
+        "timestamp":1419007153037,
+        "rootPath":"user/blue",
+        "_id":"user`549454b13b87a791550d836f"
+    }
+}</code></pre><p><code>data.optype</code> is <em>“UPDATE”</em>, and <code>data.vertex</code> is the newly added vertex in the namespace.</p><h5>3. Removal (Destruction)</h5><pre><code class="lang-json prettyprint">{
+    <span class="string">"optype"</span>:<span class="string">"DESTROY"</span>,
+    <span class="string">"vertex"</span>: {
+        <span class="string">"_id"</span>:<span class="string">"user`<span class="number">549454</span>b<span class="number">13</span>b<span class="number">87</span>a<span class="number">791550</span>d<span class="number">836</span>f"</span>,
+        <span class="string">"timestamp"</span>:<span class="number">1419007160898</span>,
+        <span class="string">"rootPath"</span>:<span class="string">"user/red"</span>
+    }
+}</code></pre><p><code>data.optype</code> is <em>“REMOVE”</em>, and <code>data.vertex</code> is the vertex which got destroyed.</p></div>
   	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
@@ -903,4 +965,4 @@ ioClient</span><span class="pun">.</span><span class="pln">emit</span><span clas
 
 
 
-</body><script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); setTimeout(function(){ $('#folder-navbar').megaMenu(); },200); })</script></html>
+</body><script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); $(document).ready(function(){ setTimeout(function(){ $('#folder-navbar').megaMenu(); },200); }); });</script></html>
