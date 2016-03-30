@@ -1,20 +1,24 @@
 .landing, .button, .navbar-fixed-top {
-  background-color: brown; }
+  background-color: #50BAEF; }
 
 .index-container li a, .menu a, .menu a:visited, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, a, ul.nav li.dropdown:hover > a {
-  color: brown; }
+  color: #50BAEF; }
 
 a:active, a:hover, .menu a:hover {
-  color: #7c2020; }
+  color: #21a8eb; }
 
 .tt-menu:before {
-  border-bottom-color: brown; }
+  border-bottom-color: #50BAEF; }
 
 .paginationLink {
-  border-color: brown; }
+  border-color: #50BAEF; }
 
 .paginationLink:hover {
-  background: brown;
-  border-color: #7c2020; }
+  background: #50BAEF;
+  border-color: #21a8eb; }
+
+.megamenu > li > ul > li.dropdown-header > a {
+  color: #50BAEF;
+  border-bottom: #50BAEF; }
 
 /*# sourceMappingURL=theme.css.map */
