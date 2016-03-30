@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 					urlToAccess: "http://localhost:9001/",
 					assets: ['bower_components', 'styles', 'images', 'docbase-config.js'],
 					checkLoadedSelector: '#navbar-collapse',
-					endDocument: "<script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); setTimeout(function(){ $('#folder-navbar').megaMenu(); },200); })</script></html>"
+					endDocument: "<script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); $(document).ready(function(){ setTimeout(function(){ $('#folder-navbar').megaMenu(); },200); }); });</script></html>"
 				}
 			},
 			spa: {
