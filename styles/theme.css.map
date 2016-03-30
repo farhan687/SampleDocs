@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,oCAAqC;EACpC,gBAAgB,EAHH,MAAM;;AAKpB,qNAAwM;EACvM,KAAK,EANQ,MAAM;;AAQpB,gCAAgC;EAC/B,KAAK,EAAE,OAAyB;;AAEhC,eAAgB;EACf,mBAAmB,EAZP,MAAM;;AAcpB,eAAgB;EACf,YAAY,EAfC,MAAM;;AAiBpB,qBAAsB;EACrB,UAAU,EAlBG,MAAM;EAmBnB,YAAY,EAAE,OAAyB;;AAExC,4CAA4C;EAC1C,KAAK,EAtBO,MAAM;EAuBlB,aAAa,EAvBD,MAAM",
-"sources": ["theme.scss"],
-"names": [],
-"file": "theme.css"
-}

@@ -1,24 +1,23 @@
 .landing, .button, .navbar-fixed-top {
-  background-color: purple; }
-
-.index-container li a, .menu a, .menu a:visited, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, a, ul.nav li.dropdown:hover > a {
-  color: purple; }
-
-a:active, a:hover, .menu a:hover {
-  color: #4d004d; }
-
-.tt-menu:before {
-  border-bottom-color: purple; }
-
+	background-color: #4ADED2;
+}
+.index-container li a, .menu a, .menu a:visited, .navbar-default .navbar-nav>li>a:active, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, a, ul.nav li.dropdown:hover>a {
+	color: #4ADED2;
+}
+a:active, a:hover, .menu a:hover{
+	color: #4ADED2;	
+}
+ .tt-menu:before {
+ 	border-bottom-color: #4ADED2;
+ } 
 .paginationLink {
-  border-color: purple; }
-
+	border-color: #4ADED2;
+}
 .paginationLink:hover {
-  background: purple;
-  border-color: #4d004d; }
-
-.megamenu > li > ul > li.dropdown-header > a {
-  color: purple;
-  border-bottom: purple; }
-
-/*# sourceMappingURL=theme.css.map */
+	background: #4ADED2;
+	border-color: #4ADED2;
+}
+.megamenu> li > ul > li.dropdown-header > a {
+  color: #4ADED2;
+  border-bottom-color: #4ADED2;
+}
