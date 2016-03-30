@@ -14,7 +14,7 @@ var docbaseConfig = {
   "github": {
     "user": "farhan687",
     "repo": "sampleDocs",
-    "path": "docInside",
+    "path": "src",
     "branch": "master",
     "access_token": "MzNlYmQ5NzA3NWQyODAyZGZiZDE2ZjBiZjkzMGViZWI0NmU5MDVjNQ=="
   },
@@ -22,14 +22,18 @@ var docbaseConfig = {
   "flatdocHtml": "./bower_components/docbase/html/flatdoc.html",
   "html5mode": false,
   "versions": {
-    "alpha": [
+    "scalr": [
       {
-        "label": "Helloworld",
-        "name": "Helloworld",
+        "label": "FAQs",
+        "name": "FAQs",
         "files": [
           {
-            "name": "welcome",
-            "label": "welcome"
+            "name": "jsapi",
+            "label": "jsapi"
+          },
+          {
+            "name": "rest",
+            "label": "rest"
           },
           {
             "label": "index",
@@ -38,12 +42,78 @@ var docbaseConfig = {
         ]
       },
       {
-        "label": "sampleWorld",
-        "name": "sampleWorld",
+        "label": "concepts",
+        "name": "concepts",
         "files": [
           {
-            "name": "justsample",
-            "label": "justsample"
+            "name": "datamodel",
+            "label": "datamodel"
+          },
+          {
+            "name": "intro",
+            "label": "intro"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "golang",
+        "name": "golang",
+        "files": [
+          {
+            "name": "api-reference",
+            "label": "api-reference"
+          },
+          {
+            "name": "golang-intro",
+            "label": "golang-intro"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "javascript",
+        "name": "javascript",
+        "files": [
+          {
+            "name": "api-reference",
+            "label": "api-reference"
+          },
+          {
+            "name": "javascript-intro",
+            "label": "javascript-intro"
+          },
+          {
+            "name": "javascript-webhooks",
+            "label": "javascript-webhooks"
+          },
+          {
+            "name": "meteor-intro",
+            "label": "meteor-intro"
+          },
+          {
+            "name": "nodejs-intro",
+            "label": "nodejs-intro"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "rest",
+        "name": "rest",
+        "files": [
+          {
+            "name": "intro",
+            "label": "intro"
           },
           {
             "label": "index",
@@ -52,14 +122,148 @@ var docbaseConfig = {
         ]
       }
     ],
-    "beta": [
+    "v2.0": [
       {
-        "label": "sample",
-        "name": "sample",
+        "label": "concepts",
+        "name": "concepts",
         "files": [
           {
-            "name": "sample1",
-            "label": "sample1"
+            "name": "datamodel",
+            "label": "datamodel"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "javascript",
+        "name": "javascript",
+        "files": [
+          {
+            "name": "angular",
+            "label": "angular"
+          },
+          {
+            "name": "api-reference",
+            "label": "api-reference"
+          },
+          {
+            "name": "oauth",
+            "label": "oauth"
+          },
+          {
+            "name": "quick-start",
+            "label": "quick-start"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "rest",
+        "name": "rest",
+        "files": [
+          {
+            "name": "api-reference",
+            "label": "api-reference"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "search",
+        "name": "search",
+        "files": [
+          {
+            "name": "quick-start",
+            "label": "quick-start"
+          },
+          {
+            "name": "use-cases",
+            "label": "use-cases"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      }
+    ],
+    "v3.0": [
+      {
+        "label": "changelog",
+        "name": "changelog",
+        "files": [
+          {
+            "name": "changelog",
+            "label": "changelog"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "concepts",
+        "name": "concepts",
+        "files": [
+          {
+            "name": "datamodel",
+            "label": "datamodel"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "javascript",
+        "name": "javascript",
+        "files": [
+          {
+            "name": "api-reference",
+            "label": "api-reference"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "rest",
+        "name": "rest",
+        "files": [
+          {
+            "name": "api-reference",
+            "label": "api-reference"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "search",
+        "name": "search",
+        "files": [
+          {
+            "name": "quick-start",
+            "label": "quick-start"
+          },
+          {
+            "name": "use-cases",
+            "label": "use-cases"
           },
           {
             "label": "index",
