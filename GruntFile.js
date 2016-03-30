@@ -4,14 +4,14 @@ module.exports = function(grunt) {
 			def: {
 				options: {
 					generatePath: "docs_html/",
-					generateSearchIndex : true,
-					generateHtml : true,
+					generateSearchIndex: true,
+					generateHtml: true,
 					baseUrl: "./",
 					operation: 'parallel',
 					urlToAccess: "http://localhost:9001/",
 					assets: ['bower_components', 'styles', 'images', 'docbase-config.js'],
-					checkLoadedSelector : '#navbar-collapse',
-					endDocument: "<script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); })</script></html>"
+					checkLoadedSelector: '#navbar-collapse',
+					endDocument: "<script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); setTimeout(function(){ $('#folder-navbar').megaMenu(); },200); })</script></html>"
 				}
 			},
 			spa: {

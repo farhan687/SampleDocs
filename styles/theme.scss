@@ -1,4 +1,4 @@
-$theme-color: brown;
+$theme-color: #50BAEF;
 
 .landing, .button, .navbar-fixed-top {
 	background-color: $theme-color;
@@ -18,4 +18,8 @@ a:active, a:hover, .menu a:hover{
 .paginationLink:hover {
 	background: $theme-color;
 	border-color: darken($theme-color, 10%);
+}
+.megamenu> li > ul > li.dropdown-header > a {
+  color: $theme-color;
+  border-bottom: $theme-color;
 }
