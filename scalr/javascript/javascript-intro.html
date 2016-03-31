@@ -175,7 +175,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><span class="twitter-typeahead" style="position: relative; display: inline-block; "><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" style="position: absolute; top: 0px; left: 0px; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size:  ; background-position: 0% 0%; background-repeat: repeat repeat; " readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent; "><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none; "></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; "><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
         </li>
         <li class="dropdown">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -267,44 +267,46 @@ GET</span><span class="pun">()</span><span class="pln"> RESPONSE
       console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"new document update: "</span></span><span class="pun">,</span><span class="pln"> response</span><span class="pun">)</span><span class="pln">
 </span><span class="pun">}).</span><span class="pln">on</span><span class="pun">(</span><span class="string"><span class="str">'error'</span></span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
       console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"getStream() failed with: "</span></span><span class="pun">,</span><span class="pln"> error</span><span class="pun">)</span><span class="pln">
-</span><span class="pun">});</span></code></pre><p>Don’t be surprised if you don’t see anything printed, <code>getStream()</code> only returns when new updates are made to the document.</p><h3 id="quick-start-to-the-js-api-step-3-geting-vs-streaming-data-3b-observe-the-updates-in-realtime">3.b: Observe the updates in realtime</h3><p>Let’s see live updates in action. We will modify the book price in our original <code>jsonObject</code> variable from 5595 to 6034 and apply <code>index()</code> again.</p><p>For brevity, we will not show the <code>index()</code> operation here.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pln">GETSTREAM</span><span class="pun">()</span><span class="pln"> RESPONSE
-</span><span class="pun">{</span><span class="pln">
-  </span><span class="string"><span class="str">"_type"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"books"</span></span><span class="pun">,</span><span class="pln">
-  </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"X</span><span class="number"><span class="str">1</span></span><span class="str">"</span></span><span class="pun">,</span><span class="pln">
-  </span><span class="string"><span class="str">"_source"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"department_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">1</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"department_name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Books"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"department_name_analyzed"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Books"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"A Fake Book on Network Routing"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"price"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">6034</span></span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>In the new document update, we can see the price change (5595 -&gt; 6034) being reflected. Subsequent changes will be streamed as JSON objects.</p><p><code>Note:</code> Appbase always streams the final state of an object, and not the diff b/w the old state and the new state. You can compute diffs on the client side by persisting the state using a composition of (_type, _id) fields.</p><h2 id="quick-start-to-the-js-api-step-4-streaming-rich-queries">Step 4: Streaming Rich Queries</h2><p>Streaming document updates are great for building messaging systems or notification feeds on individual objects. What if we were interested in continuously listening to a broader set of data changes? The <code>searchStream()</code> method scratches this itch perfectly. </p><p>In the example below, we will see it in action with a <code>match_all</code> query that returns any time a new document is added to the type ‘books’ or when any of the existing documents are modified.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pln">appbaseRef</span><span class="pun">.</span><span class="pln">searchStream</span><span class="pun">({</span><span class="pln">
-    type</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">'books'</span></span><span class="pun">,</span><span class="pln">
-    body</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        query</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-            match_all</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{}</span><span class="pln">
-        </span><span class="pun">}</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}).</span><span class="pln">on</span><span class="pun">(</span><span class="string"><span class="str">'data'</span></span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"searchStream(), new match: "</span></span><span class="pun">,</span><span class="pln"> response</span><span class="pun">);</span><span class="pln">
-</span><span class="pun">}).</span><span class="pln">on</span><span class="pun">(</span><span class="string"><span class="str">'error'</span></span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"caught a searchStream() error: "</span></span><span class="pun">,</span><span class="pln"> error</span><span class="pun">)</span><span class="pln">
-</span><span class="pun">});</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>Don’t be surprised if you don’t see anything printed, <code>getStream()</code> only returns when new updates are made to the document.</p><h3 id="quick-start-to-the-js-api-step-3-geting-vs-streaming-data-3b-observe-the-updates-in-realtime">3.b: Observe the updates in realtime</h3><p>Let’s see live updates in action. We will modify the book price in our original <code>jsonObject</code> variable from 5595 to 6034 and apply <code>index()</code> again.</p><p>For brevity, we will not show the <code>index()</code> operation here.</p><pre><code class="lang-js prettyprint">GETSTREAM() RESPONSE
+{
+  <span class="string">"_type"</span>: <span class="string">"books"</span>,
+  <span class="string">"_id"</span>: <span class="string">"X<span class="number">1</span>"</span>,
+  <span class="string">"_source"</span>: {
+    <span class="string">"department_id"</span>: <span class="number">1</span>,
+    <span class="string">"department_name"</span>: <span class="string">"Books"</span>,
+    <span class="string">"department_name_analyzed"</span>: <span class="string">"Books"</span>,
+    <span class="string">"name"</span>: <span class="string">"A Fake Book on Network Routing"</span>,
+    <span class="string">"price"</span>: <span class="number">6034</span>
+  }
+}
+</code></pre><p>In the new document update, we can see the price change (5595 -&gt; 6034) being reflected. Subsequent changes will be streamed as JSON objects.</p><p><code>Note:</code> Appbase always streams the final state of an object, and not the diff b/w the old state and the new state. You can compute diffs on the client side by persisting the state using a composition of (_type, _id) fields.</p><h2 id="quick-start-to-the-js-api-step-4-streaming-rich-queries">Step 4: Streaming Rich Queries</h2><p>Streaming document updates are great for building messaging systems or notification feeds on individual objects. What if we were interested in continuously listening to a broader set of data changes? The <code>searchStream()</code> method scratches this itch perfectly. </p><p>In the example below, we will see it in action with a <code>match_all</code> query that returns any time a new document is added to the type ‘books’ or when any of the existing documents are modified.</p><pre><code class="lang-js prettyprint">appbaseRef.searchStream({
+    type: <span class="string">'books'</span>,
+    body: {
+        query: {
+            match_all: {}
+        }
+    }
+}).on(<span class="string">'data'</span>, function(response) {
+    console.log(<span class="string">"searchStream(), new match: "</span>, response);
+}).on(<span class="string">'error'</span>, function(error) {
+    console.log(<span class="string">"caught a searchStream() error: "</span>, error)
+});
 
 RESPONSE WHEN NEW DATA MATCHES
-</span><span class="pun">{</span><span class="pln">
-  </span><span class="string"><span class="str">"_type"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"books"</span></span><span class="pun">,</span><span class="pln">
-  </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"X</span><span class="number"><span class="str">1</span></span><span class="str">"</span></span><span class="pun">,</span><span class="pln">
-  </span><span class="string"><span class="str">"_version"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">5</span></span><span class="pun">,</span><span class="pln">
-  </span><span class="string"><span class="str">"found"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
-  </span><span class="string"><span class="str">"_source"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"department_name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Books"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"department_name_analyzed"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Books"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"department_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">1</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"A Fake Book on Network Routing"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"price"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">6034</span></span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>Note:</code> Like <code>getStream()</code>, <code>searchStream()</code> subscribes to the new matches. For fetching existing search results, check out <a href="http://docs.appbase.io/scalr/javascript/api-reference.html#javascript-api-reference-getting-data-search"><code>search()</code></a>.</p><p><strong>v0.10.0</strong> introduces a new method <a href="http://docs.appbase.io/scalr/javascript/api-reference.html#javascript-api-reference-streaming-data-searchstreamtourl"><code>searchStreamToURL()</code></a> that streams results directly to a URL instead of streaming back.</p><p>In this tutorial, we have learnt how to index new data and stream both individual data and results of an expressive query. <a href="https://appbase.io">Appbase.io</a> supports a wide range of queries.</p><p>For next steps, check out our <a href="http://docs.appbase.io/scalr/javascript/api-reference.html">Javascript API reference</a>.</p></div>
+{
+  <span class="string">"_type"</span>: <span class="string">"books"</span>,
+  <span class="string">"_id"</span>: <span class="string">"X<span class="number">1</span>"</span>,
+  <span class="string">"_version"</span>: <span class="number">5</span>,
+  <span class="string">"found"</span>: true,
+  <span class="string">"_source"</span>: {
+    <span class="string">"department_name"</span>: <span class="string">"Books"</span>,
+    <span class="string">"department_name_analyzed"</span>: <span class="string">"Books"</span>,
+    <span class="string">"department_id"</span>: <span class="number">1</span>,
+    <span class="string">"name"</span>: <span class="string">"A Fake Book on Network Routing"</span>,
+    <span class="string">"price"</span>: <span class="number">6034</span>
+  }
+}
+</code></pre><p><code>Note:</code> Like <code>getStream()</code>, <code>searchStream()</code> subscribes to the new matches. For fetching existing search results, check out <a href="http://docs.appbase.io/scalr/javascript/api-reference.html#javascript-api-reference-getting-data-search"><code>search()</code></a>.</p><p><strong>v0.10.0</strong> introduces a new method <a href="http://docs.appbase.io/scalr/javascript/api-reference.html#javascript-api-reference-streaming-data-searchstreamtourl"><code>searchStreamToURL()</code></a> that streams results directly to a URL instead of streaming back.</p><p>In this tutorial, we have learnt how to index new data and stream both individual data and results of an expressive query. <a href="https://appbase.io">Appbase.io</a> supports a wide range of queries.</p><p>For next steps, check out our <a href="http://docs.appbase.io/scalr/javascript/api-reference.html">Javascript API reference</a>.</p></div>
   	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
