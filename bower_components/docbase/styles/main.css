@@ -320,12 +320,8 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     margin-bottom: 60px;
 }
 .index-container li a{
-    background: #f7f7f7;
-    border-bottom: 1px solid #eee;
     font-size: 16px;
     line-height: 40px;
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
 }
 .index-container li a:hover{
     background: #f0f0f0;
@@ -359,7 +355,15 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     height: 100%;
     z-index: 2;
 }
-
+.link-restrict {
+  line-height: 20px;
+  max-height: 20px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+}
 /*Megamenu style*/
 .menu-large {
   position: static !important;
@@ -383,6 +387,9 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   line-height: 1.428571429;
   color: #333333;
   white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 0;
 }
 .megamenu> li ul > li > a:hover,
 .megamenu> li ul > li > a:focus {
@@ -407,9 +414,11 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   color: #428bca;
   font-size: 18px;
 }
-.folder-li li.dropdown a {
+.folder-li li.dropdown > a {
     max-width: 150px;
+    max-height: 40px;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 .dropdown-header {
     padding: 0;
@@ -417,6 +426,15 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 .megamenu> li > ul > li.dropdown-header > a {
     font-size: 16px;
     border-bottom: 1px solid #ccc;
+}
+.p-l-0 {
+  padding-left: 0;
+}
+.p-r-0 {
+  padding-right: 0;
+}
+.pd-0 {
+  padding: 0;
 }
 @media (max-width: 768px) {
   .megamenu{
@@ -435,5 +453,15 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   }
   .navbar-nav .open .dropdown-menu .dropdown-header{
     color:#fff;
+  }
+  .github-star {
+    margin: 0;
+    padding: 10px 0;
+  }
+  .dropdown-header {
+    padding: 3px 0;
+  }
+  .mobile-nav {
+    margin-top: 55px;
   }
 }
