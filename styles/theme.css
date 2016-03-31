@@ -1,21 +1,23 @@
-$theme-color: brown;
-
 .landing, .button, .navbar-fixed-top {
-	background-color: $theme-color;
+	background-color: #4ADED2;
 }
 .index-container li a, .menu a, .menu a:visited, .navbar-default .navbar-nav>li>a:active, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, a, ul.nav li.dropdown:hover>a {
-	color: $theme-color;
+	color: #4ADED2;
 }
 a:active, a:hover, .menu a:hover{
-	color: darken($theme-color, 10%);	
+	color: #4ADED2;	
 }
  .tt-menu:before {
- 	border-bottom-color: $theme-color;
+ 	border-bottom-color: #4ADED2;
  } 
 .paginationLink {
-	border-color: $theme-color;
+	border-color: #4ADED2;
 }
 .paginationLink:hover {
-	background: $theme-color;
-	border-color: darken($theme-color, 10%);
+	background: #4ADED2;
+	border-color: #4ADED2;
+}
+.megamenu> li > ul > li.dropdown-header > a {
+  color: #4ADED2;
+  border-bottom-color: #4ADED2;
 }
