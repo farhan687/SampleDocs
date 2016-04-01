@@ -21,7 +21,7 @@ var docbaseConfig = {
   "indexHtml": "./html/main.html",
   "flatdocHtml": "./bower_components/docbase/html/flatdoc.html",
   "html5mode": false,
-  "manual_override": true,
+  "manual_override": false,
   "default_version": "scalr",
   "versions": {
     "scalr": [
@@ -86,6 +86,22 @@ var docbaseConfig = {
           {
             "name": "api-reference",
             "label": "api-reference"
+          },
+          {
+            "name": "javascript-intro",
+            "label": "javascript-intro"
+          },
+          {
+            "name": "javascript-webhooks",
+            "label": "javascript-webhooks"
+          },
+          {
+            "name": "meteor-intro",
+            "label": "meteor-intro"
+          },
+          {
+            "name": "nodejs-intro",
+            "label": "nodejs-intro"
           },
           {
             "label": "index",
