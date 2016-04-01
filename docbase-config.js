@@ -26,7 +26,7 @@ var docbaseConfig = {
   "versions": {
     "scalr": [
       {
-        "label": "FAQs",
+        "label": "Ironman",
         "name": "FAQs",
         "files": [
           {
@@ -44,7 +44,7 @@ var docbaseConfig = {
         ]
       },
       {
-        "label": "concepts",
+        "label": "Superman",
         "name": "concepts",
         "files": [
           {
@@ -62,7 +62,7 @@ var docbaseConfig = {
         ]
       },
       {
-        "label": "golang",
+        "label": "Heman",
         "name": "golang",
         "files": [
           {
@@ -80,7 +80,7 @@ var docbaseConfig = {
         ]
       },
       {
-        "label": "javascript",
+        "label": "Spiderman",
         "name": "javascript",
         "files": [
           {
@@ -110,7 +110,7 @@ var docbaseConfig = {
         ]
       },
       {
-        "label": "rest",
+        "label": "Captain America",
         "name": "rest",
         "files": [
           {
