@@ -21,7 +21,7 @@ var docbaseConfig = {
   "indexHtml": "./html/main.html",
   "flatdocHtml": "./bower_components/docbase/html/flatdoc.html",
   "html5mode": false,
-  "manual_override": true,
+  "manual_override": false,
   "default_version": "scalr",
   "versions": {
     "scalr": [
