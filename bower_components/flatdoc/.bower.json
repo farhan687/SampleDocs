@@ -1,0 +1,39 @@
+{
+  "name": "flatdoc",
+  "main": [
+    "flatdoc.js",
+    "legacy.js",
+    "theme-white/script.js",
+    "theme-white/style.css"
+  ],
+  "homepage": "https://github.com/rstacruz/flatdoc",
+  "authors": [
+    "Rico Sta. Cruz <hi@ricostacruz.com>"
+  ],
+  "description": "Fetch Markdown files and render them as full pages.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "documentation",
+    "markdown"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.10.0",
+  "_release": "0.10.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.10.0",
+    "commit": "f65b7921a3c7b7599bdfaf533a12b28cb9e8c051"
+  },
+  "_source": "https://github.com/appbaseio/flatdoc.git",
+  "_target": "0.10.0",
+  "_originalSource": "https://github.com/appbaseio/flatdoc.git"
+}

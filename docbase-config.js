@@ -88,22 +88,6 @@ var docbaseConfig = {
             "label": "api-reference"
           },
           {
-            "name": "javascript-intro",
-            "label": "javascript-intro"
-          },
-          {
-            "name": "javascript-webhooks",
-            "label": "javascript-webhooks"
-          },
-          {
-            "name": "meteor-intro",
-            "label": "meteor-intro"
-          },
-          {
-            "name": "nodejs-intro",
-            "label": "nodejs-intro"
-          },
-          {
             "label": "index",
             "name": "index"
           }
