@@ -13,5 +13,5 @@ before_script:
 - bower update
 env:
   global:
-  - DOCBASE_TOKEN="MzNlYmQ5NzA3NWQyODAyZGZiZDE2ZjBiZjkzMGViZWI0NmU5MDVjNQ=="
+  - DOCBASE_TOKEN="OTAwNDU5MTk4M2NlYzViYzQxNzFlN2E3Yjk1MWQ2ZjhkODRjMTg5Yg=="
 sudo: false

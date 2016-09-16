@@ -9,10 +9,10 @@ var docbaseConfig = {
   },
   "github": {
     "user": "farhan687",
-    "repo": "sampleDocs",
-    "path": "src",
+    "repo": "SampleDocs",
+    "path": "docs",
     "branch": "master",
-    "access_token": "MzNlYmQ5NzA3NWQyODAyZGZiZDE2ZjBiZjkzMGViZWI0NmU5MDVjNQ=="
+    "access_token": "OTAwNDU5MTk4M2NlYzViYzQxNzFlN2E3Yjk1MWQ2ZjhkODRjMTg5Yg=="
   },
   "indexHtml": "./html/main.html",
   "flatdocHtml": "./bower_components/docbase/html/flatdoc.html",
